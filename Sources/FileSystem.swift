@@ -52,7 +52,7 @@ public extension C32.FileSystem {
 	static func readJson<T>(from url: URL) throws -> T where T : Decodable {
 		let fm = FileManager.default
 		
-		guard let fileContents = fm.contents(atPath: url.path()) else {
+		guard let fileContents = fm.contents(atPath: url.path(percentEncoded: false)) else {
 			throw CocoaError(.fileReadUnknown)
 		}
 		
