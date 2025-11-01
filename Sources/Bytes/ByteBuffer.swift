@@ -44,7 +44,7 @@ public extension C32 {
 		}
 		
 		public func toDebugString(prefix: String = "", suffix: String = "") -> String {
-			return ByteUtils.hexToStr(_data, prefix: prefix, suffix: suffix)
+			return ByteUtils.hexToStr(_data, prefix: prefix, seperator: suffix)
 		}
 		
 		public func toAscii() -> String {
