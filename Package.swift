@@ -25,8 +25,13 @@ let package = Package(
     targets: [
         .target(
             name: "C32Shared",
-            dependencies: [],
 			path: "Sources"
+		),
+		
+		.testTarget(
+			name: "C32SharedTests",
+			dependencies: ["C32Shared"],
+			path: "Tests"
 		)
     ]
 )
